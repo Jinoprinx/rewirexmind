@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
     "target": "ES2017",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
@@ -22,6 +23,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "rewire-backend/src/config/socket.js", "rewire-backend/src/utils/jwt.js", "rewire-backend/src/utils/env.js", "rewire-backend/src/app.js", "rewire-backend/src/server.js"],
   "exclude": ["node_modules"]
 }
