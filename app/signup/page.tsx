@@ -1,16 +1,18 @@
-// pages/login.js
+// pages/signup.js
 import Link from 'next/link';
 import { FaGoogle, FaApple } from 'react-icons/fa';
 
-export default function LoginPage() {
+export default function SignupPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-100 to-indigo-200 flex flex-col items-center justify-center p-4">
       <div className="max-w-md w-full bg-white rounded-2xl shadow-lg p-8">
         {/* Logo */}
         <div className="flex justify-center mb-6">
+        <Link href='/'>
           <div className="w-16 h-16 bg-indigo-600 rounded-full flex items-center justify-center">
-            <span className="text-white text-3xl font-bold">G</span>
+            <span className="text-white text-3xl font-bold">R</span>
           </div>
+        </Link>
         </div>
 
         {/* Slogan */}

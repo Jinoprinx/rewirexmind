@@ -1,26 +1,25 @@
 import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
 
-export const config = {
-  matcher: [
-    '/member/:path*',
-    '/login',
-  ]
-}
+const protectedRoutes = ['/member']
+const authRoutes = ['/login']
 
 export function middleware(request: NextRequest) {
   const token = request.cookies.get('auth-token')?.value
   const isAuthenticated = !!token
-  const { pathname } = request.nextUrl
 
-  // Redirect to login if accessing protected routes
-  if (pathname.startsWith('/member') && !isAuthenticated) {
-    return NextResponse.redirect(new URL('/login', request.url))
+  // Redirect protected routes
+  if (protectedRoutes.some(prefix => request.nextUrl.pathname.startsWith(prefix))) {
+    if (!isAuthenticated) {
+      return NextResponse.redirect(new URL('/login', request.url))
+    }
   }
 
-  // Redirect to dashboard if authenticated
-  if (pathname === '/login' && isAuthenticated) {
-    return NextResponse.redirect(new URL('/member/dashboard', request.url))
+  // Redirect auth routes if authenticated
+  if (authRoutes.includes(request.nextUrl.pathname)) {
+    if (isAuthenticated) {
+      return NextResponse.redirect(new URL('/member/dashboard', request.url))
+    }
   }
 
   return NextResponse.next()

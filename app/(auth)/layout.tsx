@@ -6,7 +6,7 @@ export default function MemberLayout({ children }: { children: ReactNode }) {
   return (
     <AuthGuard>
       <div className="min-h-screen bg-gray-50">
-        <MemberNav />
+        {/* <MemberNav /> */}
         <main className="p-6 pb-20">{children}</main>
       </div>
     </AuthGuard>

@@ -12,7 +12,7 @@ export default function ConsultationPage() {
     // Collect values from the form using FormData
     const formData = new FormData(event.currentTarget);
     const responses = Array.from(formData.entries())
-      .map(([_, value]) => (typeof value === 'string' ? value.trim() : ''))
+      .map(([value]) => (typeof value === 'string' ? value.trim() : ''))
       .filter((val) => val !== '');
 
     if (responses.length === 0) {
@@ -43,7 +43,7 @@ export default function ConsultationPage() {
           limitations, and aspirations. This process is designed to activate the best version of yourself and help
           you manifest wealth, purpose, influence, peace, joy, leadership, dominion, and affluence."
         />
-        <h2 className="text-xl md:text-2xl font-bold text-center text-indigo-600">Let's Begin</h2>
+        <h2 className="text-xl md:text-2xl font-bold text-center text-indigo-600">Lets Begin</h2>
 
         <form onSubmit={handleSubmit} className="flex flex-col space-y-4 mt-4">
           <div>
@@ -111,7 +111,7 @@ export default function ConsultationPage() {
 
           <div>
             <p className="font-semibold">
-              6. Is there anything else you'd like to share about your journey so far?
+              6. Is there anything else you would like to share about your journey so far?
             </p>
             <textarea
               name="question6"

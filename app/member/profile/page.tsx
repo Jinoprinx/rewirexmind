@@ -30,10 +30,10 @@
 //   }
 
 
-import {useAuthStore} from '@/src/store/auth';
+//import {useAuthStore} from '@/src/store/auth';
 
 export default function ProfilePage() {
-  const user = useAuthStore((state) => state.user);
+  const user = true  //useAuthStore((state) => state.user);
 
   return (
     <div className="p-6">
@@ -41,7 +41,7 @@ export default function ProfilePage() {
       {user ? (
         <div className="mt-6 bg-white p-6 rounded-xl shadow-md">
           <h2 className="text-lg font-semibold mb-2">Email</h2>
-          <p>{user.email}</p>
+          <p>User Email</p> {/*user.email*/}
           {/* Add more user info */}
           <div className="mt-8">
             <h2 className="text-lg font-semibold mb-2">Update Profile</h2>

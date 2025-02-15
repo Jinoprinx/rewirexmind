@@ -3,7 +3,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Footer from "./components/Footer";
 import BottomNav from "./components/BottomNav";
-import Link from "next/link";
+//import Link from "next/link";
 import Card from "./components/card";
 
 export default function Home() {
@@ -23,7 +23,7 @@ export default function Home() {
                 description="New stories added daily"
                 />
                 <Card
-                href="/consultation"
+                href="/member/consultation"
                 mainImage="/images/consult1.png"
                 title="Instant one on one consultation with us today"
                 description="Begin to manifest your greatest desires"

@@ -1,39 +1,21 @@
-'use client';
+'use client'
 
-// import { useRouter } from 'next/navigation'
-// import { useEffect } from 'react'
-
-// export default function AuthGuard({ children }: { children: React.ReactNode }) {
-//   const router = useRouter()
-  
-//   useEffect(() => {
-//     const checkAuth = async () => {
-//       const token = document.cookie.includes('auth-token')
-//       if (!token) {
-//         router.push('/login')
-//       }
-//     }
-    
-//     checkAuth()
-//   }, [router])
-
-//   return <>{children}</>
-// }
-
-
-import { useEffect } from 'react';
-import { useRouter } from 'next/navigation';
-import {useAuthStore} from '@/src/store/auth';
+import { useRouter } from 'next/navigation'
+import { useEffect } from 'react'
 
 export default function AuthGuard({ children }: { children: React.ReactNode }) {
-  const router = useRouter();
-  const isAuthenticated = useAuthStore((state) => state.isAuthenticated);
-
+  const router = useRouter()
+  
   useEffect(() => {
-    if (!isAuthenticated) {
-      router.push('/login');
+    const checkAuth = async () => {
+      const token = document.cookie.includes('auth-token')
+      if (!token) {
+        router.push('/login')
+      }
     }
-  }, [isAuthenticated, router]);
+    
+    checkAuth()
+  }, [router])
 
-  return isAuthenticated ? <>{children}</> : null;
+  return <>{children}</>
 }

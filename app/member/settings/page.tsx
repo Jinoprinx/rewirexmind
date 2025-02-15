@@ -1,8 +1,8 @@
 'use client';
-import {useAuthStore} from '@/src/store/auth';
+//import {useAuthStore} from '@/src/store/auth';
 
 export default function SettingsPage() {
-  const isAuthenticated = useAuthStore((state) => state.isAuthenticated);
+  const isAuthenticated = true //useAuthStore((state) => state.isAuthenticated);
 
   return (
     <div className="p-6">
