@@ -9,6 +9,8 @@ export default function LoginPage() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const router = useRouter()
+  //Removed var:{user, isAuthenticated in order to deploy to vercel}
+  //Removed var:{logout} and char{'}
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault()
