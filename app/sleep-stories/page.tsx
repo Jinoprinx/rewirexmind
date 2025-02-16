@@ -1,4 +1,4 @@
-import { MeditationSession } from '@/types'
+import { MeditationSession } from '@/app/types/index';
 import { FaRegUser, FaMoon, FaMusic, FaEllipsisH } from 'react-icons/fa'
 import { GiNightSleep } from 'react-icons/gi'
 import Link from 'next/link'
