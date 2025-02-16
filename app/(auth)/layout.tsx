@@ -1,6 +1,7 @@
 import { ReactNode } from 'react'
 import AuthGuard from '../components/AuthGuard'
-import MemberNav from '../components/MemberNav'
+//import MemberNav from '../components/MemberNav'
+//Remember to add MemberNav to add after integration with backend
 
 export default function MemberLayout({ children }: { children: ReactNode }) {
   return (
