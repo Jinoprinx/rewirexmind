@@ -2,7 +2,7 @@
 'use client'
 
 import { FaRegUser, FaMoon, FaMusic, FaEllipsisH } from 'react-icons/fa'
-import { GiMeditation } from 'react-icons/gi'
+import { GiMeditation } from 'react-icons/gi' // removed the import of GiNightSleep
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
