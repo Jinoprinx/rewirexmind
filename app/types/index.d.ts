@@ -1,24 +1,26 @@
-interface MeditationSession {
+export interface MeditationSession {
     title: string
     duration: string
     category: string
+    image?: string
+    href?: string
   }
   
-  interface SleepStory {
+  export interface SleepStory {
     title: string
     duration: string
     category: string
     offline?: boolean
   }
   
-  interface MusicTrack {
+  export interface MusicTrack {
     title: string
     artist: string
     duration: string
     category: string
   }
 
-  interface Card {
+  export interface Card {
     title: string
     description: string
     coverImage: string
