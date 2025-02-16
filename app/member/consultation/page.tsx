@@ -11,9 +11,9 @@ export default function ConsultationPage() {
 
     // Collect values from the form using FormData
     const formData = new FormData(event.currentTarget);
-    const responses = Array.from(formData.entries())
+    const responses = Array.from(formData.entries()) //removed char:{_}
       .map(([value]) => (typeof value === 'string' ? value.trim() : ''))
-      .filter((val) => val !== '');
+      .filter((val) => val !== ''); ////removed escape char:{'}
 
     if (responses.length === 0) {
       setResponseMessage(
