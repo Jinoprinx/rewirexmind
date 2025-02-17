@@ -1,7 +1,7 @@
 import { MeditationSession } from '@/app/types/index';
 import { FaRegUser, FaMoon, FaMusic, FaEllipsisH } from 'react-icons/fa'
 import { GiNightSleep } from 'react-icons/gi'
-import Link from 'next/link'
+//import Link from 'next/link'
 
 export default function SleepStoriesPage() {
   const sessions: MeditationSession[] = [
@@ -10,35 +10,35 @@ export default function SleepStoriesPage() {
       duration: '10min', 
       category: 'Anxiety Relief',
       image: '/images/sleep.png',
-      href: '/sleep-stories/healthy-night-nap' // Add unique href for each session
+     // href: '/sleep-stories/healthy-night-nap' // Add unique href for each session
     },
     { 
       title: 'Deep Sleep for a Healthy Body', 
       duration: '20min', 
       category: 'Sleep',
       image: '/images/story8.png',
-      href: '/sleep-stories/deep-sleep'
+      //href: '/sleep-stories/deep-sleep'
     },
     { 
       title: 'Managing Office Stress', 
       duration: '30min', 
       category: 'Sleep',
       image: '/images/consult1.png',
-      href: '/sleep-stories/office-stress'
+      //href: '/sleep-stories/office-stress'
     },
     { 
       title: '3 Steps to Healthy Sleep', 
       duration: '15min', 
       category: 'Sleep',
       image: '/images/medi.png',
-      href: '/sleep-stories/healthy-sleep'
+      //href: '/sleep-stories/healthy-sleep'
     },
     { 
       title: 'Living in Sleep-Denial', 
       duration: '20min', 
       category: 'Sleep',
       image: '/images/story4.png',
-      href: '/sleep-stories/sleep-denial'
+      //href: '/sleep-stories/sleep-denial'
     },
   ]
 
@@ -58,9 +58,9 @@ export default function SleepStoriesPage() {
         <h1 className="text-2xl font-bold text-gray-600 mb-4">My Recommended Fiction</h1>
         <div className="grid grid-cols-1 gap-6">
           {sessions.map((session, index) => (
-            <Link
+            <a
               key={index}
-              href={session.href}
+              //href={session.href}
               className="block relative h-64 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden group"
               style={{
                 backgroundImage: `url(${session.image})`,
@@ -83,7 +83,7 @@ export default function SleepStoriesPage() {
                   </span>
                 </div>
               </div>
-            </Link>
+            </a>
           ))}
         </div>
       </div>
