@@ -1,4 +1,4 @@
-import { MeditationSession } from '@/types'
+import { MeditationSession } from '@/app/types/index'
 
 export default function MeditatePage() {
   const sessions: MeditationSession[] = [
