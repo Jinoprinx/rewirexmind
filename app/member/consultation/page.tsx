@@ -23,7 +23,7 @@ export default function ConsultationPage() {
     }
 
     setResponseMessage(`
-      <h2 class="text-xl font-semibold text-center text-green-600">Thank You for Sharing!</h2>
+      <h2 class="text-xl font-semibold text-center text-indigo-600">Thank You for Sharing!</h2>
       <p>Your responses have been recorded. Based on what you've shared, I will now analyze your situation and provide personalized guidance to help you overcome your limitations and achieve your desired outcomes.</p>
       <p>Please stay tuned for further instructions and exercises tailored specifically for your growth journey.</p>
     `);
@@ -36,8 +36,8 @@ export default function ConsultationPage() {
           Consultation Session for Mental & Spiritual Growth
         </h1>
         <Card
-            href="/consultation"
-            mainImage="/images/consult.png"
+            href="/member/consultation"
+            mainImage="/images/mastery.png"
             title="Today you begin to manifest your greatest desires"
             description="Welcome to your personalized consultation session. Together, we will uncover your current state,
           limitations, and aspirations. This process is designed to activate the best version of yourself and help
