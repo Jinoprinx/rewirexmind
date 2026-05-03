@@ -3,6 +3,8 @@
 import { useState } from 'react'
 import AudioPlayer, { Track } from '@/app/components/AudioPlayer'
 
+const BLOB = 'https://2xw7ylrrjaatgau2.public.blob.vercel-storage.com'
+
 interface Song {
   title: string
   artist: string
@@ -18,7 +20,7 @@ const songs: Song[] = [
     artist: 'Sam Smith',
     category: 'Sleep Mix',
     duration: '3:33',
-    src: '/music/song1.mp3',
+    src: `${BLOB}/song1.mp3`,
     color: '#7c3aed',
   },
   {
@@ -26,7 +28,7 @@ const songs: Song[] = [
     artist: 'Ambient Studio',
     category: 'Relaxation',
     duration: '4:12',
-    src: '/music/song2.mp3',
+    src: `${BLOB}/song2.mp3`,
     color: '#1d4ed8',
   },
   {
@@ -34,7 +36,7 @@ const songs: Song[] = [
     artist: 'Nature Sounds',
     category: 'Nature Sounds',
     duration: '5:20',
-    src: '/music/song3.mp3',
+    src: `${BLOB}/song3.mp3`,
     color: '#065f46',
   },
   {
@@ -42,7 +44,7 @@ const songs: Song[] = [
     artist: 'Deep Blue',
     category: 'Ambient Noise',
     duration: '6:00',
-    src: '/music/song4.mp3',
+    src: `${BLOB}/song4.mp3`,
     color: '#0e7490',
   },
   {
@@ -50,7 +52,7 @@ const songs: Song[] = [
     artist: 'Woodland Sounds',
     category: 'Nature Sounds',
     duration: '4:48',
-    src: '/music/song5.mp3',
+    src: `${BLOB}/song5.mp3`,
     color: '#166534',
   },
   {
@@ -58,7 +60,7 @@ const songs: Song[] = [
     artist: 'Meditation Co.',
     category: 'Meditation',
     duration: '4:01',
-    src: '/music/song6.mp3',
+    src: `${BLOB}/song6.mp3`,
     color: '#92400e',
   },
   {
@@ -66,7 +68,7 @@ const songs: Song[] = [
     artist: 'Cosmos Audio',
     category: 'Sleep Mix',
     duration: '3:50',
-    src: '/music/song7.mp3',
+    src: `${BLOB}/song7.mp3`,
     color: '#312e81',
   },
 ]

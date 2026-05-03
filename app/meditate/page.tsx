@@ -3,6 +3,8 @@
 import { useState } from 'react'
 import AudioPlayer, { Track } from '@/app/components/AudioPlayer'
 
+const BLOB = 'https://2xw7ylrrjaatgau2.public.blob.vercel-storage.com'
+
 interface MeditationSession {
   title: string
   duration: string
@@ -18,7 +20,7 @@ const sessions: MeditationSession[] = [
     duration: '10 min',
     category: 'Anxiety Relief',
     image: '/images/medi1.png',
-    sound: '/meditation-sounds/medi1.mp3',
+    sound: `${BLOB}/medi1.mp3`,
     color: '#7c3aed',
   },
   {
@@ -26,7 +28,7 @@ const sessions: MeditationSession[] = [
     duration: '20 min',
     category: 'Sleep',
     image: '/images/medi.png',
-    sound: '/meditation-sounds/medi2.mp3',
+    sound: `${BLOB}/medi2.mp3`,
     color: '#1d4ed8',
   },
   {
@@ -34,7 +36,7 @@ const sessions: MeditationSession[] = [
     duration: '15 min',
     category: 'Focus & Clarity',
     image: '/images/medi1.png',
-    sound: '/meditation-sounds/medi3.mp3',
+    sound: `${BLOB}/medi3.mp3`,
     color: '#065f46',
   },
   {
@@ -42,7 +44,7 @@ const sessions: MeditationSession[] = [
     duration: '30 min',
     category: 'Deep Relaxation',
     image: '/images/medi.png',
-    sound: '/meditation-sounds/medi1.mp3',
+    sound: `${BLOB}/medi1.mp3`,
     color: '#0e7490',
   },
   {
@@ -50,7 +52,7 @@ const sessions: MeditationSession[] = [
     duration: '25 min',
     category: 'Stress Relief',
     image: '/images/medi1.png',
-    sound: '/meditation-sounds/medi2.mp3',
+    sound: `${BLOB}/medi2.mp3`,
     color: '#6d28d9',
   },
 ]
