@@ -1,7 +1,5 @@
 import { MeditationSession } from '@/app/types/index';
-import { FaRegUser, FaMoon, FaMusic, FaEllipsisH } from 'react-icons/fa'
 import { GiNightSleep } from 'react-icons/gi'
-//import Link from 'next/link'
 
 export default function SleepStoriesPage() {
   const sessions: MeditationSession[] = [
@@ -87,29 +85,6 @@ export default function SleepStoriesPage() {
           ))}
         </div>
       </div>
-
-      {/* Bottom Navigation */}
-      <nav className="bg-white border-t border-gray-200 fixed bottom-0 w-full">
-        <div className="flex justify-around p-4">
-          {[
-            { icon: FaRegUser, label: 'For You' },
-            { icon: FaMoon, label: 'Sleep', active: true },
-            { icon: GiNightSleep, label: 'Meditate' },
-            { icon: FaMusic, label: 'Music' },
-            { icon: FaEllipsisH, label: 'More' },
-          ].map((item, index) => (
-            <button
-              key={index}
-              className={`flex flex-col items-center space-y-1 ${
-                item.active ? 'text-indigo-600' : 'text-gray-500'
-              }`}
-            >
-              <item.icon className="text-xl" />
-              <span className="text-xs">{item.label}</span>
-            </button>
-          ))}
-        </div>
-      </nav>
 
       {/* Floating Action Button */}
       <div className="fixed bottom-20 right-4">

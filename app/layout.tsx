@@ -1,13 +1,7 @@
 // app/layout.tsx
 import "../styles/globals.css";
 import type { Metadata } from "next";
-// import dynamic from 'next/dynamic'
-
-// // Dynamically import BottomNav to prevent SSR issues
-// const BottomNav = dynamic(() => import('@/components/BottomNav'), {
-//   ssr: false,
-//   loading: () => <div className="h-16" /> // Loading placeholder
-// })
+import BottomNav from "./components/BottomNav";
 
 export const metadata: Metadata = {
   title: "RewireXmind",
@@ -23,6 +17,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="relative min-h-screen bg-gray-50">
       <div className="pb-16">{children}</div>
+      <BottomNav />
       </body>
     </html>
   );

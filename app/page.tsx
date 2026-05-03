@@ -2,7 +2,6 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Footer from "./components/Footer";
-import BottomNav from "./components/BottomNav";
 //import Link from "next/link"; Link import has been commented out
 import Card from "./components/card";
 
@@ -48,7 +47,6 @@ export default function Home() {
               />
             </div>
           </div>
-          <BottomNav/>
           <Footer />
         </div>
       )

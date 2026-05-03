@@ -4,6 +4,7 @@ export interface MeditationSession {
     category: string
     image?: string
     href?: string
+    sound?: string
   }
   
   export interface SleepStory {

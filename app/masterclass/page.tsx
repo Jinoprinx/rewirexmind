@@ -1,6 +1,5 @@
 // app/masterclass/page.tsx
-import { FaRegUser, FaMoon, FaMusic, FaEllipsisH, FaDownload } from 'react-icons/fa';
-import { GiMeditation } from 'react-icons/gi';
+import { FaDownload } from 'react-icons/fa';
 
 export default function MasterclassPage() {
   const classes = [
@@ -80,29 +79,6 @@ export default function MasterclassPage() {
           ))}
         </div>
       </main>
-
-      {/* Bottom Navigation */}
-      <nav className="bg-white border-t border-gray-200 fixed bottom-0 w-full">
-        <div className="flex justify-around p-4">
-          {[
-            { icon: FaRegUser, label: 'For You', active: true },
-            { icon: FaMoon, label: 'Sleep' },
-            { icon: GiMeditation, label: 'Meditate' },
-            { icon: FaMusic, label: 'Music' },
-            { icon: FaEllipsisH, label: 'More' },
-          ].map((item, index) => (
-            <button
-              key={index}
-              className={`flex flex-col items-center space-y-1 ${
-                item.active ? 'text-indigo-600' : 'text-gray-500'
-              }`}
-            >
-              <item.icon className="text-xl" />
-              <span className="text-xs">{item.label}</span>
-            </button>
-          ))}
-        </div>
-      </nav>
     </div>
   );
 }
